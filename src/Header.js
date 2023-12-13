@@ -1,36 +1,26 @@
-import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 
-export default function Header() {
-  const [isOpen, setOpen] = useState(false);
-
+export default function Header({ isOpen, setOpen, gamesList }) {
   return (
     <header>
       <div className="logo">
-        <img
-          src="\its-random-high-resolution-logo-transparent.svg"
-          alt="logo"
-        />
+        <img src="\logo.svg" alt="logo" />
       </div>
       <nav className="navbar">
         <Hamburger color="#28502e" toggled={isOpen} toggle={setOpen} />
-        {isOpen && <Navigation />}
+        {isOpen && <Navigation gamesList={gamesList} />}
       </nav>
     </header>
   );
 }
 
-function Navigation() {
+function Navigation({ gamesList }) {
   return (
     <ul className="navigation">
       <li>Home</li>
-      <li>Game 2 </li>
-      <li>Game blablabla</li>
-      <li>Game 4</li>
-      <li>Game 5</li>
-      <li>Game hah</li>
-      <li>Game 7</li>
-      <li>Game hahahaha</li>
+      {gamesList.map((game) => (
+        <li>{game.name}</li>
+      ))}
     </ul>
   );
 }
