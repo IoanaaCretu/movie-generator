@@ -1,36 +1,55 @@
 import { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Games from "./Games";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Games from "./components/Games";
 
 function App() {
   const [isOpen, setOpen] = useState(false);
+  const [selectedGame, setSelectedGame] = useState(null);
+
   const data = [
     {
-      id: 1,
+      id: 0,
       name: "Random number generator",
       src: "/pic.jpg",
+      component: "RandomNumber",
+    },
+    {
+      id: 1,
+      name: "Random Quotes",
+      src: "/pic.jpg",
+      component: "RandomQuotes",
     },
     {
       id: 2,
-      name: "Random Quotes",
+      name: "Random Color Palette",
       src: "/pic.jpg",
+      component: "RandomColorPalette",
     },
     {
       id: 3,
-      name: "Random Color Palette",
-      src: "/pic.jpg",
-    },
-    {
-      id: 4,
       name: "Pick your movie",
       src: "/pic.jpg",
+      component: "RandomMovie",
     },
   ];
+
   return (
     <>
-      <Header isOpen={isOpen} setOpen={setOpen} gamesList={data} />
-      <Games isOpen={isOpen} games={data} />
+      <Header
+        isOpen={isOpen}
+        setOpen={setOpen}
+        gamesList={data}
+        setSelectedGame={setSelectedGame}
+      />
+
+      <Games
+        isOpen={isOpen}
+        games={data}
+        selectedGame={selectedGame}
+        setSelectedGame={setSelectedGame}
+      />
+
       <Footer />
     </>
   );
