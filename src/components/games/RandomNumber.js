@@ -23,7 +23,7 @@ export function RandomNumber() {
   };
 
   return (
-    <div className="number-generator">
+    <div className="number-generator generator">
       <h1>Random Number Generator</h1>
       <p>
         Keep in mind: The randomness is computer-generated, not truly random.

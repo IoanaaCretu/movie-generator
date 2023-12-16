@@ -216,6 +216,10 @@ header {
 }
 
 .game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
   cursor: pointer;
   background-color: var(--clr-dark-green);
 

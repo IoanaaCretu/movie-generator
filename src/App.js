@@ -11,25 +11,25 @@ function App() {
     {
       id: 0,
       name: "Random number generator",
-      src: "/pic.jpg",
+      src: "/images/binary-1254484_640.png",
       component: "RandomNumber",
     },
     {
       id: 1,
-      name: "Random Quotes",
-      src: "/pic.jpg",
-      component: "RandomQuotes",
+      name: "Random Advice",
+      src: "/images/dialog-148815_640.png",
+      component: "RandomAdvice",
     },
     {
       id: 2,
       name: "Random Color Palette",
-      src: "/pic.jpg",
+      src: "/images/color-154058_640.png",
       component: "RandomColorPalette",
     },
     {
       id: 3,
       name: "Pick your movie",
-      src: "/pic.jpg",
+      src: "/images/theater-158168_640.png",
       component: "RandomMovie",
     },
   ];

@@ -1,7 +1,7 @@
 import { RandomColorPalette } from "./games/RandomColorPalette";
 import { RandomMovie } from "./games/RandomMovie";
 import { RandomNumber } from "./games/RandomNumber";
-import { RandomQuotes } from "./games/RandomQuotes";
+import { RandomAdvice } from "./games/RandomAdvice";
 
 export default function Games({
   isOpen,
@@ -15,8 +15,8 @@ export default function Games({
         return <RandomNumber />;
       case "RandomMovie":
         return <RandomMovie />;
-      case "RandomQuotes":
-        return <RandomQuotes />;
+      case "RandomAdvice":
+        return <RandomAdvice />;
       case "RandomColorPalette":
         return <RandomColorPalette />;
       default:
