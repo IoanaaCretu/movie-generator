@@ -1,0 +1,39 @@
+.number-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-generator h1 {
+  color: var(--clr-dark-green);
+}
+.number-generator p {
+  color: var(--clr-light-green);
+  font-size: 15px;
+  margin: 0;
+}
+
+.number-generator input {
+  margin: 1rem;
+}
+
+.number-generator button {
+  cursor: pointer;
+
+  background-color: var(--clr-dark-green);
+  color: var(--clr-neutral-w);
+  font-weight: 700;
+
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.number-generator button:hover {
+  background-color: var(--clr-light-green);
+}
+
+.generated-number {
+  font-size: 5rem;
+  font-weight: 700;
+}
